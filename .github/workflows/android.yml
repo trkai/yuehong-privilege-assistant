@@ -28,10 +28,11 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew assembleRelease || ./gradlew assembleDebug
+      run: ./gradlew assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: app-apk
-        path: "/build/outputs/apk//*.apk"
+        name: YueHong-Privilege-Assistant-APK
+        path: |
+          **/*.apk
